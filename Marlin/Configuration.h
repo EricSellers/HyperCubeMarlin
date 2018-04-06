@@ -532,14 +532,19 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 3200, 202 }
+ //Hypercube 1
+//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 3200, 202 }
+
+//Hypercube 2
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 3200, 173 }
+
 
 /**
  * Default Max Feed Rate (mm/s)
  * Override with M203
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 300, 300, 5, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 10, 25 }
 
 /**
  * Default Max Acceleration (change/s) change = mm/s
@@ -688,7 +693,10 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 34  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.55   // Z offset: -below +above  [the nozzle]
+//hypercube 1
+//#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.54   // Z offset: -below +above  [the nozzle]
+//hypercube 2
+#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.11   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
@@ -787,8 +795,8 @@
 #define Y_BED_SIZE 200
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 0
-#define Y_MIN_POS 0
+#define X_MIN_POS -9
+#define Y_MIN_POS -9
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
