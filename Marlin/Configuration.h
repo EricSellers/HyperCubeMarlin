@@ -128,6 +128,9 @@
 
 // Define this to set a unique identifier for this printer, (Used by some programs to differentiate between machines)
 // You can use an online service to generate a random UUID. (eg http://www.uuidgenerator.net/version4)
+//HyperCube1
+//#define MACHINE_UUID "45b2cd6b-7e1d-4fda-9855-05052e42ca85"
+//HyperCube2
 #define MACHINE_UUID "e2750274-0bb3-4902-adfa-49fce76c43ab"
 
 // @section extruder
@@ -410,9 +413,9 @@
   //#define  DEFAULT_bedKd 1675.16
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
-  #define  DEFAULT_bedKp 686.55
-  #define  DEFAULT_bedKi 134.30
-  #define  DEFAULT_bedKd 877.41
+  #define  DEFAULT_bedKp 444.77
+  #define  DEFAULT_bedKi 70.51
+  #define  DEFAULT_bedKd 701.40
 #endif // PIDTEMPBED
 
 // @section extruder
@@ -533,7 +536,7 @@
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
  //Hypercube 1
-//#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 3200, 202 }
+#//define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 3200, 202 }
 
 //Hypercube 2
 #define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 160, 3200, 173 }
@@ -691,12 +694,14 @@
  *      O-- FRONT --+
  *    (0,0)
  */
+//hypercube 1
+//#define X_PROBE_OFFSET_FROM_EXTRUDER 25  // X offset: -left  +right  [of the nozzle]
+//#define Y_PROBE_OFFSET_FROM_EXTRUDER 10  // Y offset: -front +behind [the nozzle]
+//#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.55   // Z offset: -below +above  [the nozzle]
+//hypercube 2
 #define X_PROBE_OFFSET_FROM_EXTRUDER 34  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER 0  // Y offset: -front +behind [the nozzle]
-//hypercube 1
-//#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.54   // Z offset: -below +above  [the nozzle]
-//hypercube 2
-#define Z_PROBE_OFFSET_FROM_EXTRUDER 0.11   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.55   // Z offset: -below +above  [the nozzle]
 
 // X and Y axis travel speed (mm/m) between probes
 #define XY_PROBE_SPEED 8000
